@@ -1,0 +1,13 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+<h1>Profile Detail</h1>
+<p><img src="{{user.profile.image.url}}" alt="" width="100"></p>
+<p>Id : {{user.id}}</p>
+<p>Username : {{user.username}}</p>
+<p>Email : {{user.email}}</p>
+<p>First name : {{user.first_name}}</p>
+<p>Last name : {{user.last_name}}</p>
+
+<p><button><a href="{% url 'user_profile:update' user.id %}">Update</a></button></p>
+{% endblock %}
